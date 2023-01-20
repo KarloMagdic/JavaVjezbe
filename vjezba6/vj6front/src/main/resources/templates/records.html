@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.tymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Records</title>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>Record ID</th>
+
+    <th>Date</th>
+
+    <th>Value</th>
+
+    <th>Device</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="record : ${listRecord}">
+    <td>[[${record.id}]]</td>
+    <td>[[${record.dateOfMeasurement}]]</td>
+    <td>[[${record.measurement}]]</td>
+    <td>[[${record.device}]]</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
